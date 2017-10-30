@@ -16,7 +16,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jmh.version>1.14</jmh.version>
+        <jmh.version>1.19</jmh.version>
         <javac.target>1.8</javac.target>
         <uberjar.name>benchmarks</uberjar.name>
     </properties>
@@ -41,7 +41,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.39</version>
+            <version>5.1.44</version>
         </dependency>
         <dependency>
             <groupId>org.drizzle.jdbc</groupId>
@@ -142,24 +142,18 @@
     </build>
     <profiles>
         <profile>
-            <id>mariadb_1.6.0</id>
+            <id>mariadb_2.1.2</id>
             <properties>
-                <mariadb.version>1.6.0-SNAPSHOT</mariadb.version>
+                <mariadb.version>2.1.2</mariadb.version>
             </properties>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
         </profile>
         <profile>
-            <id>mariadb_1.5.5</id>
+            <id>mariadb_1.6.5</id>
             <properties>
-                <mariadb.version>1.5.5</mariadb.version>
-            </properties>
-        </profile>
-        <profile>
-            <id>mariadb_1.4.6</id>
-            <properties>
-                <mariadb.version>1.4.6</mariadb.version>
+                <mariadb.version>1.6.5</mariadb.version>
             </properties>
         </profile>
     </profiles>
